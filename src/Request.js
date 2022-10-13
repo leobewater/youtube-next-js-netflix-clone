@@ -1,5 +1,6 @@
 // https://www.themoviedb.org/settings/api
-const API_KEY = process.env.TMDB_API_KEY;
+// should implement process.env.TMDB_API_KEY
+const API_KEY = '8e7eafadc4334e074eb5a54a4279b7b7';
 
 const requests = {
   fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,

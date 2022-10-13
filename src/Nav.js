@@ -23,8 +23,9 @@ function Nav() {
     <div className={`nav ${show && 'nav__black'}`}>
       <div className="nav__contents">
         <img
+          onClick={() => navigate('/')}
           className="nav__logo"
-          src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
+          src="https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png?w=684&h=456"
           alt=""
         />
         <img

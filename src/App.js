@@ -9,18 +9,30 @@ import {
   // signOut,
 } from 'firebase/auth';
 import { auth } from './firebase';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout, selectUser } from './features/userSlice';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
-  const user = null;
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     // listen to user login/logout when loads
     const unsubscribe = onAuthStateChanged(auth, (userAuth) => {
       if (userAuth) {
         // logged in
-        console.log("userAuth:", userAuth);
+        // console.log('userAuth:', userAuth);
+        // dispatch event to store for login
+        dispatch(
+          login({
+            uid: userAuth.uid,
+            email: userAuth.email,
+          })
+        );
       } else {
         // logged out
+        dispatch(logout);
       }
     });
 
@@ -34,7 +46,7 @@ function App() {
       element: !user ? <Login /> : <HomeScreen />,
       errorElement: <ErrorScreen />,
     },
-    { path: '/profile', element: user && <HomeScreen /> },
+    { path: '/profile', element: user && <ProfileScreen /> },
   ]);
 
   return (

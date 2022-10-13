@@ -1,0 +1,16 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  color:white;
+}
+
+.error-page h1 {
+    margin-bottom:20px;
+}
+
+.error-page p {
+    margin-bottom:10px;
+}

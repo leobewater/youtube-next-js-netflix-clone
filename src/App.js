@@ -32,13 +32,13 @@ function App() {
         );
       } else {
         // logged out
-        dispatch(logout);
+        dispatch(logout());
       }
     });
 
     // clean up for performance
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   const router = createBrowserRouter([
     {

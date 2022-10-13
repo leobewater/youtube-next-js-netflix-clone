@@ -1,5 +1,7 @@
 Video: https://www.youtube.com/watch?v=HW5roUF2RLg
 
+***NOT COMPLETED YET as I get stuck in Firebase SetDoc
+
 This is a React App, NOT Next.js App
 
 Firebase
@@ -12,3 +14,5 @@ https://console.firebase.google.com/u/0/project/nextjs-netflix-clone-3eeb3/exten
 
 When sign up a new user, firebase save user information and also stripe customer ID and link too.
 When create new products in stripe, it should sync all the products to firebase
+
+\> yarn start

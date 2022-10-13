@@ -3,10 +3,15 @@
   margin-left: 20px;
 }
 
+.row h2 {
+  margin-bottom:10px;
+}
+
 .row__posters {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
+  margin-bottom:20px;
 }
 
 .row__posters::-webkit-scrollbar {
